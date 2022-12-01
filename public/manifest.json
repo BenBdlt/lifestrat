@@ -1,6 +1,13 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "id": "/",
+  "scope": "/",
+  "name": "Life Strategy",
+  "short_name": "LifeStrat",
+  "description": "Manage your life with strategy",
+  "orientation": "any",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay"],
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,7 +17,8 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "maskable"
     },
     {
       "src": "logo512.png",
