@@ -1,10 +1,11 @@
 .homepage {
     display: flex;
-
 }
+
 .homepage .left-pannel {
     width: 60%;
 }
+
 .homepage .right-pannel {
     width: 40%;
     margin-top: 5.8rem;
@@ -24,6 +25,7 @@
 }
 
 .lastActivities {
+    margin-top: 20% !important;
     width: 60%;
     height: 100%;
     display: flex;
@@ -31,6 +33,7 @@
     margin: auto;
     box-shadow: rgba(126, 126, 126, 0.4) 0px 2px 4px, rgba(114, 114, 114, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
 .lastActivities h1 {
     font-weight: 500;
     width: 100%;
@@ -43,9 +46,11 @@
     padding: 1rem 0;
     font-size: 24px;
 }
+
 .lastActivities ul {
     padding: 0 20px;
 }
+
 .lastActivities li {
     list-style-type: none;
     border: 1px solid rgba(0, 0, 0, 0.479);
@@ -57,18 +62,24 @@
     transition: 0.4s;
     cursor: pointer;
 }
-.lastActivities li p, .lastActivities li span {
+
+.lastActivities li p,
+.lastActivities li span {
     transition: 0.4s;
 }
+
 .lastActivities li span {
     display: flex;
     margin-left: auto;
 }
+
 .lastActivities li:hover {
     background-color: black;
     transition: 0.4s;
 }
-.lastActivities li:hover p, .lastActivities li:hover span {
+
+.lastActivities li:hover p,
+.lastActivities li:hover span {
     color: white;
     font-weight: 600;
     font-size: 18px;
@@ -88,6 +99,7 @@
     margin-bottom: 10%;
     box-shadow: rgba(126, 126, 126, 0.4) 0px 2px 4px, rgba(114, 114, 114, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
 .newActivity svg {
     width: 80px;
     height: 80px;
@@ -96,17 +108,19 @@
     transition: 0.8s;
 }
 
-.newActivity svg:hover path{
+.newActivity svg:hover path {
     filter: invert(1);
     transition: 0.5s;
 }
-.newActivity svg:hover{
+
+.newActivity svg:hover {
     background-color: black;
     border-radius: 100%;
     border: 1px solid black;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     transition: 0.8s;
 }
+
 .newActivity svg.module-open {
     /* animation-name: module-btn;
     animation-duration: 0.4s;
@@ -138,7 +152,6 @@
         transition: 0.4s;
     }
 }
-
 
 .mainActivity {
     background-color: rgba(0, 0, 0, 0.03);
