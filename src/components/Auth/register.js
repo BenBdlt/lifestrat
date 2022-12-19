@@ -2,7 +2,9 @@ import React from 'react';
 import '../../pages/Auth/auth.css';
 import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword  } from "firebase/auth";
-
+import { useEffect } from 'react';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 
 function RegisterForm() {
 
@@ -11,6 +13,8 @@ function RegisterForm() {
     const [inputs, setInputs] = useState({});
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
+    const [user, loading, errorAuth] = useAuthState(auth);
+    const navigate = useNavigate();
 
     //RECUPERATION DES DONNEES USER
     const handleChange = (event) => {
@@ -55,6 +59,10 @@ function RegisterForm() {
             const errorMessage = error.message;
         });
     }
+
+    useEffect(() => {
+        if (user) navigate("/");
+    })
     
 
     return (

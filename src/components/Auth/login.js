@@ -3,6 +3,9 @@ import '../../pages/Auth/auth.css';
 import { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword  } from "firebase/auth";
 import { useAuthValue } from "../../AuthContext"
+import { useEffect } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 
 
 function LoginForm() {
@@ -12,6 +15,8 @@ function LoginForm() {
     const [inputs, setInputs] = useState({});
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
+    const [user, loading, errorAuth] = useAuthState(auth);
+    const navigate = useNavigate();
 
     //RECUPERATION DES DONNEES USER
     const handleChange = (event) => {
@@ -33,6 +38,8 @@ function LoginForm() {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
+            const jwtToken = user?.getIdToken();
+            console.log("TOKEN " + jwtToken)
             // console.log(user)
             // ...
         })
@@ -57,14 +64,10 @@ function LoginForm() {
             const errorMessage = error.message;
         });
     }
-
     
-
-    function ChildOfAuthProvider(){
-        const {currentUser} = useAuthValue()
-        console.log("child" + currentUser)
-    }
-    
+    useEffect(() => {
+        if (user) navigate("/");
+    })
 
     return (
     <div className="loginform">

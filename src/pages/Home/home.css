@@ -128,6 +128,13 @@
     animation: module-btn 0.5s forwards;
     transition: 0.4s;
 }
+.newActivity svg.module-close {
+    /* animation-name: module-btn;
+    animation-duration: 0.4s;
+    animation-fill-mode:both; */
+    animation: module-btn 0.5s reverse;
+    transition: 0.4s;
+}
 
 @keyframes module-btn {
     0% {
@@ -165,4 +172,21 @@
     justify-content: center;
     margin-bottom: 10%;
     box-shadow: rgba(126, 126, 126, 0.4) 0px 2px 4px, rgba(114, 114, 114, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+@media screen and (max-width: 950px) {
+    .homepage {
+        flex-direction: column;
+    }
+    .left-pannel, .right-pannel {
+        width: 100% !important;
+        margin-top: 1rem;
+    }
+    .newActivity {
+        margin-top: 12rem;
+    }
+    .lastActivities {
+        margin-top: 2rem !important;
+        margin-bottom: 3rem !important;
+    }
 }
