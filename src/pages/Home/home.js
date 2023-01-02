@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 function App() {
 
   const navigate = useNavigate();
-  console.log(auth.currentUser)
+  // console.log(auth.currentUser)
   useEffect(() => {
     if (auth.currentUser == null) navigate("/login");
   })

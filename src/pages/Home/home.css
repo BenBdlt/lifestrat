@@ -44,7 +44,8 @@
     margin: 0;
     margin-bottom: 0.5rem;
     padding: 1rem 0;
-    font-size: 24px;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 .lastActivities ul {
@@ -86,6 +87,8 @@
     transition: 0.4s;
 }
 
+/** NEW ACTIVITY **/
+
 .newActivity {
     background-color: rgba(0, 0, 0, 0.03);
     font-size: 20px;
@@ -94,12 +97,25 @@
     padding: 1rem 0;
     margin: 5rem auto auto auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
     box-shadow: rgba(126, 126, 126, 0.4) 0px 2px 4px, rgba(114, 114, 114, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
+.newActivity h1 {
+    font-weight: 500;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0;
+    font-size: 22px;
+    text-transform: uppercase;
+}
 .newActivity svg {
     width: 80px;
     height: 80px;
@@ -113,7 +129,7 @@
     transition: 0.5s;
 }
 
-.newActivity svg:hover {
+.newActivity .time-cat svg:hover {
     background-color: black;
     border-radius: 100%;
     border: 1px solid black;
@@ -124,15 +140,8 @@
 .newActivity svg.module-open {
     /* animation-name: module-btn;
     animation-duration: 0.4s;
-    animation-fill-mode:both; */
+    animation-fill-mode:forwards; */
     animation: module-btn 0.5s forwards;
-    transition: 0.4s;
-}
-.newActivity svg.module-close {
-    /* animation-name: module-btn;
-    animation-duration: 0.4s;
-    animation-fill-mode:both; */
-    animation: module-btn 0.5s reverse;
     transition: 0.4s;
 }
 
@@ -160,6 +169,139 @@
     }
 }
 
+.newActivity .formPost{
+    width: 95%;
+    height: 90%;
+    font-size: 16px !important;
+}
+.newActivity .formHead{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 4rem;
+    width: 100%;
+}
+.newActivity .formHead{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+.newActivity .formHead .time-cat{
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+}
+.newActivity .formHead input {
+    height: 44px !important;
+    margin: auto;
+    margin-left: 0;
+    font-size: 16px;
+    width: 40%;
+}
+.newActivity .formHead input.title {
+    width: 40%;
+}
+.newActivity .formHead .basicSingle {
+    margin: auto;
+    margin-right: 0;
+    width: 50%;
+}
+.newActivity .formHead .basicSingle input{
+    height: 1rem;
+}
+.newActivity .formHead .basicSingle div svg{
+    height: 1rem;
+    border-radius: 0 !important;
+}
+.newActivity textarea {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    font-size: 14px;
+    resize: none;
+}
+.newActivity button {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+}
+.newActivity .date-picker {
+    font-size: 16px;
+    margin: auto;
+    width: 40%;
+}
+.newActivity .date-picker div {
+    height: 50px;
+}
+.newActivity .date-picker svg {
+    height: 2rem;
+    border-radius: 0 !important;
+    width: 100%;
+}
+.newActivity .formHead .date-picker input{
+    height: 1rem;
+    margin: 0;
+    width: auto !important;
+} 
+.newActivity .formHead .date-picker button {
+    margin: 0 !important;
+    margin-right: 1rem !important;
+}
+.newActivity .submit-activities {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 0px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.newActivity .submit-activities:hover {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.newActivity .loading {
+    height: 2.5rem;
+    margin: 1rem auto;
+    display: flex;
+    animation: rotation 1s infinite linear;
+    cursor: auto;
+}
+.newActivity .loading:hover {
+    filter: invert(100%);
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+@media screen and (max-width: 1450px) {
+    .formHead {
+        flex-direction: column !important;
+        height: 8rem !important;
+    }
+    .time-cat {
+        width: 100% !important;
+        margin-top: auto;
+    }
+    .formHead input.title {
+        width: 100% !important;
+        margin: 0.2rem auto;
+    }
+    .date-picker {
+        margin-left: 0 !important;
+    }
+}
+
+
+/** MAIN ACTIVITY **/
+
 .mainActivity {
     background-color: rgba(0, 0, 0, 0.03);
     font-size: 20px;
@@ -173,6 +315,9 @@
     margin-bottom: 10%;
     box-shadow: rgba(126, 126, 126, 0.4) 0px 2px 4px, rgba(114, 114, 114, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
+
+/** HOMEAPGE RESPONSIVE **/
 
 @media screen and (max-width: 950px) {
     .homepage {
