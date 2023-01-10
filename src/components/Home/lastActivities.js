@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@mui/material';
 import '../../pages/Home/home.css';
 import { useEffect, useState } from 'react';
 import { db, auth } from '../../firebase';
@@ -31,10 +32,12 @@ function LastActivities() {
           actList?.map((post,i)=>(
             <div key={i} className="actContent">
               <ul>
-                <li>
-                    <p>{post.title}</p>
-                    <span>{post.add_date}</span>
-                </li>
+                <a href="/actvity:id">
+                  <li>
+                      <p>{post.title}</p>
+                      <span>{post.add_date}</span>
+                  </li>
+                </a>
               </ul>
             </div>
           ))

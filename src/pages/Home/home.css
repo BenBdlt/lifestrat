@@ -65,8 +65,11 @@
 }
 
 .lastActivities li p,
+.lastActivities a,
 .lastActivities li span {
     transition: 0.4s;
+    color: black;
+    text-decoration: none !important;
 }
 
 .lastActivities li span {
